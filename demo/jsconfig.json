@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ESNext",
     "checkJs": true,
     "baseUrl": "./",
     "paths": {
@@ -10,15 +10,16 @@
     "strict": false,     
     
     "typeRoots": [
-      "./", "./types" 
+      "../js/", "../../js/types" 
     ],
     "types": [] 
   },
 
   "include": [
-    "./**/*.d.ts",  
-    "./*.js",
-    "./plugins/**.js",            
+    "./plugins/*.js",  
+    "../js/**/*.d.ts",  
+    "../js/*.js",
+    "../js/plugins/**.js",            
   ],
 
   "exclude": [

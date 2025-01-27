@@ -30,14 +30,30 @@ class CustomClass
   }
 }
 
+function TmpText(text)
+{
+  return "your text was "+text;
+}
+
+//window object
+window.VsConvertEscapeCharacters.registerEscapeCharacter("X", TmpText);
+
+//global
+VsConvertEscapeCharacters.registerEscapeCharacter("X", TmpText);
+
+//Vs.plugins namespace
+Vs.plugins.VsConvertEscapeCharacters.registerEscapeCharacter("X", TmpText);
+
+//or through category grouped namespaces
+
+
 //register a new arrow function for the escape character X
-VsConvertEscapeCharacters.registerEscapeCharacter("X", (text) => {
+Vs.System.registerEscapeCharacter("X", (text) => {
   return "your text was "+text;
 })
 
-
-//register a new arrow function for the escape character X
-VsConvertEscapeCharacters.registerProcessEscapeCharacter("Y",(currentWindow, state, param) => {
+//register a new arrow function for the escape character Z
+Vs.System.registerProcessEscapeCharacter("Z",(currentWindow, state, param) => {
 
   CustomClass.DoSomething();
   CustomClass.DoSomething2(param);
