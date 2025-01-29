@@ -11,6 +11,15 @@ declare namespace Vs
     declare class VsConvertEscapeCharacters
     {
       /**
+       * gets the plugin name
+       */
+      static readonly PluginName: string;
+
+      /**
+       * gets the version in major, minor, patch
+       */
+      static readonly Version : [number,number,number];
+      /**
        * converts the escaped characters in a string to their corresponding values
        * @param text text with escaped characters
        */

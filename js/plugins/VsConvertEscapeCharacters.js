@@ -1,7 +1,7 @@
 // #region RPG Maker MZ --------------------------------------------------------------------------
 /*:
  * @target MZ
- * @plugindesc Version 1.1.0 allows custom escape characters in message boxes
+ * @plugindesc Version 1.2.0 allows custom escape characters in message boxes
  * @author VsRpgDev
  * @url https://github.com/vsrpgdev/VsConvertEscapeCharacters
  * @help VsConvertEscapeCharacters.convertEscapeCharacters(string) allows you to use the standard escape 
@@ -40,13 +40,19 @@
 //#endregion --------------------------------------------------------------------------
 
 //@ts-ignore ---------------- Header line for all VsRpgDev Plugins, create the global VsRpgDev object -------------
-"undefined"==typeof Vs&&(Vs={get author(){return"VsRpgDev"}, get isVsRpgDev(){return"VsRpgDev"==Vs.author}, plugins:{},});
-
+"undefined"==typeof Vs&&(Vs={get author(){return"VsRpgDev"}, get isVsRpgDev(){return"VsRpgDev"==Vs.author}, plugins:{}, c(m,...p){ p.filter(x => { const v=x.split("."); const found = Object.entries(Vs.plugins).some(p => p[1].PluginName == v[0] && (v.length < 2 || v[1]==p[1].Version[0])&& (v.length < 3 || v[2]<=p[1].Version[1]));    return !found;   }).forEach(e => {throw new Error(`${m} Error: plugin '${e}' not found or wrong version`)}); } });
 
 (()=>{
   
+  const pluginName = "VsConvertEscapeCharacters";
 //#region global Classes --------------------------------------------------------------------------
   const _VsConvertEscapeCharacters = class {
+
+    get PluginName () {return pluginName}
+    
+    /**  @type {[number,number,number]} */
+    get Version () {return [1,2,0]}
+
     /**
      * 
      * @param {string} text 
