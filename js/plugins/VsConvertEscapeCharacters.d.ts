@@ -40,7 +40,7 @@ declare namespace Vs
       /**
        * register a new escape character 
        * @param char escape character to use
-       * @param method callback method which gets the paramter from within the brackets [] and should return the replacement text
+       * @param method callback method which gets the parameter from within the brackets [] and should return the replacement text
        */
       static registerEscapeCharacter(char : string, method: (string)=>string) : void;
 
@@ -52,7 +52,7 @@ declare namespace Vs
       /**
        * register process escape character, these get processed character by character when the textbox draws the message text
        * @param char scape character to use
-       * @param method callback method which gets the the current windows, the textstate and paramter from within the brackets [] and should return the replacement text
+       * @param method callback method which gets the the current windows, the textstate and parameter from within the brackets [] and should return the replacement text
        */
       static registerProcessEscapeCharacter(char : string, method: (windowBase:Window_Base, state: TextState, param: string)=>void) : void;
 

@@ -4,29 +4,29 @@
  * @author VsRpgDev
  * @help 
  * 
- * @param exampleParamter
- * @text exampleParamter
+ * @param exampleParameter
+ * @text exampleParameter
  * @type string
 */
 
 const parameters = PluginManager.parameters("demo");
-const exampleParamter = parameters["exampleParamter"] || "";
+const exampleParameter = parameters["exampleParameter"] || "";
 
 class CustomClass
 {
   static DoSomething()
   {
-    // convert escaped characters in exampleParamter
-    let param = VsConvertEscapeCharacters.convertEscapeCharacters(exampleParamter);
+    // convert escaped characters in exampleParameter
+    let param = VsConvertEscapeCharacters.convertEscapeCharacters(exampleParameter);
 
-    console.log("this is the paramter: "+ param);
+    console.log("this is the parameter: "+ param);
   }
   static  DoSomething2(text)
   {
     // convert escaped characters in text
     let param = VsConvertEscapeCharacters.convertEscapeCharacters(text);
 
-    console.log("this is the paramter: "+ param);
+    console.log("this is the parameter: "+ param);
   }
 }
 
