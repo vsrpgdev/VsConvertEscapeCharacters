@@ -1,4 +1,4 @@
-# RPG Maker MZ - VsConvertEscapeCharacters Plugin - Version: 1.1.0
+# RPG Maker MZ - VsConvertEscapeCharacters Plugin - Version: 1.2.0
 
 1. [Installation](#1-installation)
 1. [Configuration](#2-configuration)
