@@ -136,4 +136,4 @@ For convertEscapeCharacters, the original convertEscapeCharacters method from Wi
 No known bugs. The plugin should work with all other plugins as long as *convertEscapeCharacters* and *processEscapeCharacter* are still called.
 
 # 7. License
-VsConvertEscapeCharacters by rpgmakerwebthickness467 is marked with CC0 1.0 Universal. To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/
+VsConvertEscapeCharacters by vsrpgdev is marked with CC0 1.0 Universal. To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/
